@@ -1,0 +1,45 @@
+{
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "Calculate the current through the zener diode with a load resistance of 1kΩ:<br/><p style=\"text-align:center\"><img src=\"images/zenerq1.png\"></p>",
+        "answers": {
+          "a": "12.5 mA",
+          "b": "15.5 mA",
+          "c": "13.8 mA",
+          "d":"14.7 mA"
+          
+        },
+        "explanations": {
+          "a": "You have choosen option (a). The answer is incorrect",
+          "b": "You have choosen option (b). The answer is incorrect",
+          "c": "You have choosen option (c). The answer is incorrect",
+          "d":"You have choosen option (d). The answer is correct"
+        },
+        "correctAnswer": "d",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "Calculate the current through the zener diode with a load resistance of 910Ω:<br/><p style=\"text-align:center\"><img src=\"images/zenerq2.png\"></p>",
+        "answers": {
+          "a": "14.2 mA",
+          "b": "12.4 mA",
+          "c": "13.8 mA",
+          "d": "15.2 mA"
+          
+        },
+        "explanations": {
+          "a": "You have choosen option (a). The answer is correct  ",
+          "b": "You have choosen option (b). The answer is incorrect",
+          "c": "You have choosen option (c). The answer is incorrect",
+          "d":"You have choosen option (d). The answer is incorrect"
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
+      }
+
+  
+
+    ]
+  }
+  

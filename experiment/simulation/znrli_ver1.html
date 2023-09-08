@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!--Document Name:znrli_ver1.html
+    Author:Sukriti--->
+<html>
+    <head>
+        <title>Zener Diode-Line Regulator</title>
+        <meta charset="windows-1252">
+        <meta name="description" content="EMF Generation">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <script src="./js/canvasjs.min.js"></script>
+        <script class="include" type="text/javascript" src="./js/jquery_files/jquery.min.js"></script>
+        <script class="include" type="text/javascript" src="./js/jquery_files/jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="./js/jquery_files/shCore.min.js"></script>
+        <script type="text/javascript" src="./js/jquery_files/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="./js/jquery_files/shBrushXml.min.js"></script>
+        <script class="include" type="text/javascript" src="./js/jquery_files/jqplot.meterGaugeRenderer.min.js"></script>
+        <script type="text/javascript" src="./pop_up/pop_up.js"></script>
+        <link rel="stylesheet" type="text/css" href="./pop_up/pop_up.css">
+        <link rel="stylesheet" type="text/css" href="./css/znrlicss.css">
+      
+   <link rel="stylesheet" href="./css/cktconnection_znr_line.css">
+   
+  <!---- library file ----->
+  <script src="./js/graph.ob.js"></script>
+  <script src="./js/graph_use.ob.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+<!--------------------------> 
+
+    </head>
+    <body bgcolor="#000066";data-demo-id="animation"; style="width:100%"> 
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo" style="text-align:center">
+               
+                <img src="./images/logo.jpg" style="height:150px;width:1160px;"></div>
+        </header>
+
+        <div id="dialogoverlay"></div>
+        <div id="dialogbox">
+            <div>
+                <div id="dialogboxhead"></div>
+                <div id="dialogboxbody"></div>
+                <div id="dialogboxfoot"></div>
+            </div>
+        </div>
+
+        <div id="whole_body" style=" background-color:white;position:relative; margin-left:auto; margin-right:auto; top:0px;height:1050px; width:1160px;">
+          
+                <div style="font-size:30px; text-align:center;padding-right:100px; height:60px">  <b> Zener Diode - LINE Regulator </b></div>
+         <div id="ckt_values1" style="position:relative; top:280px;left:780px; height:300px; width:400px">
+                <p>
+                    <img src ="images/zener_line_cnnct.png" style="width:500px;height:300px;position:absolute;right:120px" />  
+                <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
+                <div class="littledot" id="ld1"></br><a href="#" class="cmdLink detach" rel="ld1">1</a>
+</div>			
+                <div class="littledot" id="ld3"></br><a href="#" class="cmdLink detach" rel="ld3">3</a></div>
+                <div class="littledot" id="ld4"></br><a href="#" class="cmdLink detach" rel="ld4">4</a></div>
+                <div class="littledot" id="ld5"></br><a href="#" class="cmdLink detach" rel="ld5">5</a></div>
+                <div class="littledot" id="ld6"></br><a href="#" class="cmdLink detach" rel="ld6">6</a></div>
+                <div class="littledot" id="ld7"></br><a href="#" class="cmdLink detach" rel="ld7">7</a></div>
+                <div class="littledot" id="ld8"></br><a href="#" class="cmdLink detach" rel="ld8">8</a></div>
+                <div class="littledot" id="ld9"></br><a href="#" class="cmdLink detach" rel="ld9">9</a></div>              
+                <div class="littledot" id="ld12"></br><a href="#" class="cmdLink detach" rel="ld12">12</a></div>
+				<div class="littledot" id="ld10"></br><a href="#" class="cmdLink detach" rel="ld10">10</a></div>
+				<div class="littledot" id="ld11"></br><a href="#" class="cmdLink detach" rel="ld11">11</a></div>
+				<div class="littledot" id="ld13"></br><a href="#" class="cmdLink detach" rel="ld13">13</a></div>
+				<div class="littledot" id="ld14"></br><a href="#" class="cmdLink detach" rel="ld14">14</a></div>
+				<div class="littledot" id="ld15"></br><a href="#" class="cmdLink detach" rel="ld15">15</a></div>
+		        <div class="littledot" id="ld16"></br><a href="#" class="cmdLink detach" rel="ld16">16</a></div>
+		        <div class="littledot" id="ld17"></br><a href="#" class="cmdLink detach" rel="ld17">17</a></div>
+		        <div class="littledot" id="ld18"></br><a href="#" class="cmdLink detach" rel="ld18">18</a></div>
+				<div class="littledot" id="ld19"></br><a href="#" class="cmdLink detach" rel="ld19">19</a></div>
+		   
+</div>
+<script src="./js/jsplumb1.js"></script>
+				<div class="example-content" style="position:absolute; top:10px;right:150px;left:200px">
+                    <link rel="stylesheet" type="text/css" href="./css/css_metergauge.css">
+                    <!------------------------------------Metergauge1(Voltmeter)output voltage-------------------------------------------------->
+                    <div id="chart1" class="plot" style="position:relative;width:200px; height:110px;top:30px;right:55px"></div>
+                    <script src="./js/jquery_files/js_metergaugeli.js"></script>
+
+                    <!------------------------------------Metergauge2(Ammeter)source current----------------------------------------------------->
+                    <div id="chart2" class="plot" style="position:absolute;width:250px; height:110px;right:85px;top:-75px"></div>
+                    <!------------------------------------Metergauge3(Ammeter)load current------------------------------------------------------>
+                    <div id="chart3" class="plot" style="position:absolute;width:250px; height:110px;right:-35px;top:-75px"></div>
+                    <!------------------------------------Metergauge4(Ammeter)zener current------------------------------------------------------>
+                    <div id="chart4" class="plot" style="position:absolute;width:250px; height:110px;right:115px;top:65px"></div>
+
+
+                    <p style="position:absolute;top:10px;right:285px;font-size:15px"><b>I<sub>S</sub></b></p>
+                    <p style="position:absolute;top:10px;right:95px;font-size:15px"><b>I<sub>L</sub></b></p>
+                    <p style="position:absolute;top:145px;right:295px;font-size:15px"><b>I<sub>Z</sub></b></p>
+                    <p style="position:absolute;top:130px;right:30px;font-size:15px"><b>V<sub>o</sub></b></p>
+                   
+                </div>	
+
+                <input type="number" value=""  id='dc'    placeholder="Volt" oninput="txtchng()"  style="background-color:#e6f5ff;position:absolute; top:170px;  right:500px; width:70px" readonly/>
+                <input type="text" value="" id ='volt' placeholder="Volt"  style="background-color:#e6f5ff;position:absolute; top:153px;  right:105px; width:70px" readonly/>
+                <input type="text" value="" id='amps' placeholder="Ampere"  style="background-color:#e6f5ff;position:absolute; top:33px;  right:355px; width:70px" readonly/>
+                <input type="text" value="" id='ampl' placeholder="Ampere"  style="background-color:#e6f5ff;position:absolute; top:33px;  right:135px; width:70px" readonly/>
+                <input type="text" value="" id='ampz' placeholder="Ampere"  style="background-color:#e6f5ff;position:absolute; top:190px;  right:365px; width:70px" readonly/>
+                <input type ="number" value="" id="res"   placeholder="Resistance" oninput="txtchnge()"  style="background-color:#e6f5ff;position:absolute; top:35px;  right:480px; width:80px" readonly/>
+                <input type="number"  value="" id="resl"  placeholder="Resistance" oninput="loadchange()" style="background-color:#e6f5ff;position:absolute; top:190px;  right:170px; width:80px" readonly/>
+                <input type="number"  value="" id="zenrv"  placeholder="ZenerVolatge" oninput="znrvchange()" style="background-color:#e6f5ff;position:absolute; top:190px;  right:260px; width:80px" readonly/>
+                <!--<input type="button" id="siml" value="check" onclick="check()"  style="position:absolute; top:290px; width:100px; right:150px;"/>-->
+                
+
+
+            </div>
+
+
+           <div id="cntrwrap" style="position:absolute;border: 2px solid #3385ff; top:40px;width:360px;height:190px;right:10px;">
+            <div id="cntrlr" style="position:absolute; background-color:#3385ff;   height:50px; top:0px; right:0px; width:360px;font-size: 16px;font-weight: bold;"><p style="text-align:center;padding-right:210px;color:white"><b>CONTROLS</b></p></div>
+            <div id="slide" style=" position:absolute; top:70px; right:10px; width:350px;  border-radius: 10px;">
+                &nbsp&nbsp DC volt : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="range" name="inpdc" id="vdc" min="0" max="30" step="0.2" value=""  oninput="sliderChange()" style="width:160px"> &nbsp; Volt<br>
+                &nbsp&nbsp; Zener Diode(V<sub>Z</sub>) : <input type="range" name="znrvl" id="znrvlt" min="3.3" max="10" step="0.1" value="" oninput="znrchange()"style="width:160px"> &nbsp; Volt<br>
+                &nbsp&nbsp Resistance(R<sub>S</sub>) :&nbsp&nbsp&nbsp&nbsp<input type="range" name="resis" id="res1" min="100" max="5000" step="100" value="" oninput="textChange()" style="width:160px"> &nbsp; Ohms<br>
+                &nbsp&nbsp Resistance(R<sub>L</sub>) : &nbsp&nbsp&nbsp<input type="range" name="resis2" id="res2" min="100" max="10000" step="100" value="" oninput="tetChange()" style="width:160px"> &nbsp; Ohms<br>
+
+                <br>
+                <input type="button" id="add" value="Add to Table" onclick="tabled()" disabled=true style="position:absolute; top:130px; width:100px;  right:250px;cursor:pointer "/>  
+                <input type="button" id="plt" value="Plot" onclick="plot()" disabled=true style="position:absolute; top:130px; width:100px; right:140px;cursor:pointer "/>  
+                <input type="button" id="clr" value="Clear" onclick="clearf()" disabled=true style="position:absolute; top:130px; width:100px; right:20px;cursor:pointer  "/>
+ <button id="check-button" style="position:absolute; top:160px; width:100px; right:140px;cursor:pointer;  ">Check connection</button>
+<button  id="delete-connct"  onclick="deleteconnection()"  style="position:absolute; top:160px; width:100px; right:30px;cursor:pointer; ">Delete all connection</button>
+                     
+		  </div></div>
+            <div id="msg" style="position:absolute;top:110px;right:400px;width:210px;height:190px;">
+                <p id="demo" style="color:red;"></p>
+                <p id="demos" style="color:green;"></p>
+                
+            </div>
+             <div id="description" style="background-color: #3385ff;   position:absolute; top:40px; left:10px; width:510px;font-size: 16px;font-weight: bold;">
+<div class="dropdown">
+    <p style="text-align:center;padding-right:150px;color:white"> INSTRUCTION</p>
+                    <div class="dropdown-content">
+                    <ol type="1">
+					<li>Connect the components as mentioned below:<br>
+                        L1-L3, L4-L7, L8-L15, L15-L10, L11-L17, L16-L18, L17-L5, L18-L6, L13-L15, L14-L19, L9-L16, L12-L9.(For eg. click on 1 and then drag to 3 and so on.)</li>
+				<li> Click on  'Check Connection' button to check the connections.</li>
+<li> If connected wrong, double click on the wrong connection.   Else click on 'Delete all connection' button to erase all the connections.	</li>	
+                          
+                    <li>Set the Zener Voltage(V<sub>Z</sub>)= 5.1 v</li>
+                    <li>Set the  Series Resistance (R<sub>S</sub>) = 1 k&#937;</li>
+                    <li>Set the  Load Resistance (R<sub>L</sub>) = 2 k&#937;</li>
+                    <li>Vary DC voltage from 0 to 20 v.</li>
+                    <li>Voltmeter is placed parallel to load resistor and ammeter series with the series resistor.</li>
+                    <li>Choose appropriate DC voltage such that zener diode is 'on'.</li>
+                    <li>Now note the Voltmeter and Ammeter reading for various DC voltage.  </li>
+                    <li>Note the Load current(I<sub>L</sub>), zener current(I<sub>Z</sub>), Output voltage(V<sub>O</sub>)</li>
+                    <li>Calculate the voltage regulation.</li>
+					<li>Repeat the experiment for Load Resistance (R<sub>L</sub>) =  5 k&#937;</li>
+                    <!-- <li>1W D0-41 Glass Zener Diode 1N4757A, Zener voltage is 50 V.</li>-->
+                </ol> 
+            </div>
+ </div>
+                 </div>
+           <div id="tblwrap" style="position:absolute;border: 2px solid #3385ff; top:150px;width:510px;height:380px;left:10px">
+            <div style="position:absolute; font-size:16px;background-color: #3385ff;  top:0px;left:0px; width:510px; height:50px;font-weight: bold;"><p style="text-align:center;padding-right:80px;color:white"> <b> EXPERIMENTAL TABLE</b></p>
+               </div>
+               <p style="position:absolute; font-size:20px;top:40px;left:10px;">Zener Voltage(V<sub>Z</sub>):<input type="text"  id="znv" value="" size="4" readonly />V&nbsp;<br>
+            Series Resistance(R<sub>S</sub>):<input type="text" id="rs" value="" size="4" readonly/>K&#937;<br>
+            Load Resistance (R<sub>L</sub>):<input type="text" id="rl" value="" size="4" readonly/>K&#937;<br><br></p>
+            
+            <div id="table" style="background-color:#e6f5ff;position:absolute;top:150px;width:510px;height:230px; left:px;overflow-y: auto;">
+
+                <table id="mytable" border="1" >                    
+                    <tr>
+                        <th> Serial No.</th>
+                        <th>Unregulated supply voltage(V<sub>S</sub>)<br>V</th>
+                        <th>Load Current(I<sub>L</sub>)<br>mAmp</th>
+                        <th>Zener Current(I<sub>Z</sub>)<br>mAmp</th>
+                        <th>Regulated Output Voltage(V<sub>O</sub>)<br>V</th>
+                        <th>% Voltage Regulation</th>
+                    </tr>                   
+
+                </table>
+
+            </div></div>
+             <div id="grpwrap" style="position:absolute;border: 2px solid #3385ff; top:670px;width:1050px;height:360px;left:10px">
+                <div style="position:absolute; font-size:16px; top:0px;left:0px;  height:50px;background-color:#3385ff;  width:1050px;font-weight: bold;"><p style="text-align:center;padding-right:910px;color:white"> <b> GRAPH PLOT</b>
+                    <div class="tooltip" ><button id="calci"  onclick="printf()" style="position:absolute;padding-right:40px; cursor:pointer;top:13px;right:20px;width:5px;height:25px;border:none; background-color:#3385ff;">
+                            <img src="./images/Print Filled.png" alt="Save icon" style="width:20px;height:20px;top:13px;"/></button> 
+                        <span class="tooltiptext">Print</span></div>
+
+</p></div>
+            <div id="chartContainer" style=" position:absolute;  top:50px;  left:0px; height:300px; width:1050px;  ">
+
+            </div>
+        </div>
+       
+        <!--<div align="center" style="position:absolute; top:1050px; width:1160px">
+            <INPUT TYPE="button" onClick="printf()" value="Click here to print" style="cursor: pointer; text-align:center; font-size: 20px; height:40px; width:500px" >
+            <br><br></div>-->
+ </div>
+        <div id="lab-footer" style="height:20px;width:1310px;text-align: center;padding:bottom">
+                        <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+                   </div>
+       <script type="text/javascript" src="./js/znrli.js"></script>
+	    <script src="./js/cktconnection_znr_line.js"></script>
+    </body>
+</html>
+
+

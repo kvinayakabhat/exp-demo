@@ -1,0 +1,24 @@
+
+/* 
+    Created on : 12 Aug, 2016, 10:37:53 AM
+    Author     : sukriti
+*/
+
+input{
+    width:310px; 
+    height:40px;
+    background:#4E9CAF; //darkmoderate cyan
+    text-align: center;
+    padding:20px;
+    padding-top:3px;
+    padding-bottom:3px;
+    border-radius:10px;
+    color:white;
+    font-weight: bold;
+    font-size:12pt;
+    display: inline-block;
+    cursor:pointer;
+}
+input:hover{
+    background-color: #20B2AA;  //LightSeaGreen
+}
